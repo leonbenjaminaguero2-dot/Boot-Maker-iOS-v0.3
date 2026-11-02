@@ -1,0 +1,12 @@
+BOOTMAKER v0.3 — ESTADO VERIFICABLE
+
+1. USB AUTOMÁTICO: revalida la última carpeta de USB autorizada por el usuario al reabrir la app.
+   NO enumera pendrives nuevos sin selección inicial; NO identifica un disco físico a nivel de bloques.
+2. FORMATEO: NO. Una IPA convencional para iPhone 13 Pro no tiene API de particionado/formateo crudo.
+3. ISO BOOTEABLE: extrae archivos ISO9660/Joliet compatibles con EFI/BOOT/BOOTX64.EFI
+   o EFI/BOOT/BOOTAA64.EFI a un volumen FAT32 existente, y verifica los bytes.
+   NO garantiza arranque de cualquier ISO (Windows UDF, Linux ISO híbridas, BIOS/MBR).
+4. PRUEBAS: lector ISO sintético + casos dañados, swiftc parse de archivos, sin Xcode aquí.
+5. PARA IPA: Ejecutar GitHub Actions / BootMaker - IPA sin firma.
+
+No hay supuesta detección de hardware ni barra de escritura falsa.
